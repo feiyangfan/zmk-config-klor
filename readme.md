@@ -45,10 +45,20 @@ push-button positions, in the same order as the existing keymap.
 
 After building successfully, flash the matching firmware to both halves. Connect
 the left half using a USB data cable, then open https://zmk.studio/ in Chrome or
-Edge. With the stock keymap:
+Edge, or use the native ZMK Studio app.
+
+To unlock with only the left half powered, press the three top-row **Q + W + E**
+positions together (the three outermost keys of the left top row, within 100 ms).
+This combo works on every layer and remains at those physical positions if you
+remap the letters in Studio. Rebuild and flash the updated left firmware first.
+
+The base layer uses QWERTY, with hold-for-Shift on F and J. The existing Q + W
+Escape combo is retained; both overlapping combos use a 100 ms window.
+
+The original two-half unlock method is also available with the stock keymap:
 
 1. Hold RAISE (right thumb key), then hold the left Ctrl thumb key to reach ADJUST.
-2. Tap the base-layer F position to select USB output.
+2. Tap the base-layer E position to select USB output.
 3. Tap the base-layer W position to unlock Studio, then connect/select KLOR in Studio.
 4. Edit the keymap and save the changes to the keyboard.
 
