@@ -47,13 +47,22 @@ After building successfully, flash the matching firmware to both halves. Connect
 the left half using a USB data cable, then open https://zmk.studio/ in Chrome or
 Edge, or use the native ZMK Studio app.
 
-To unlock with only the left half powered, press the three top-row **Q + W + E**
-positions together (the three outermost keys of the left top row, within 100 ms).
-This combo works on every layer and remains at those physical positions if you
-remap the letters in Studio. Rebuild and flash the updated left firmware first.
+The base layer currently replaces four QWERTY positions with left-only lighting
+diagnostic controls:
 
-The base layer uses QWERTY, with hold-for-Shift on F and J. The existing Q + W
-Escape combo is retained; both overlapping combos use a 100 ms window.
+| Position | Action |
+| --- | --- |
+| Q | Unlock ZMK Studio |
+| W | Turn external VCC power on |
+| E | Toggle RGB lighting |
+| R | Increase RGB brightness |
+
+These are single-key actions on the base layer. The Q+W Escape and Q+W+E unlock
+combos have been removed so they do not intercept these controls. The remaining
+base keys use QWERTY, with hold-for-Shift on F and J.
+Rebuild and flash the updated left firmware first. If previously saved Studio
+mappings override these keys, reassign them in Studio or use Restore Stock
+Settings to return all mappings to the compiled keymap.
 
 The original two-half unlock method is also available with the stock keymap:
 
